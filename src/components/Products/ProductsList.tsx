@@ -2,9 +2,10 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchProductsAsync } from "../../Store/productsSlice";
-import type { ProductsState, Products, Product } from "../../Store/productsSlice"; 
+import type { ProductsState, Products, Product } from "../../Store/productsSlice";
+import type { AppDispatch } from "../../Store/store"; 
 const ProductsList = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const { products, isLoading, isError, errorMessage } = useSelector(
     (state: { products: ProductsState }) => state.products,
   );
