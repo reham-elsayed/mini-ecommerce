@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchProductsAsync } from "../Store/productsSlice";
-import type { ProductsState, Products, Product } from "../Store/productsSlice"; 
+import { fetchProductsAsync } from "../../Store/productsSlice";
+import type { ProductsState, Products, Product } from "../../Store/productsSlice"; 
 const ProductsList = () => {
   const dispatch = useDispatch();
   const { products, isLoading, isError, errorMessage } = useSelector(
